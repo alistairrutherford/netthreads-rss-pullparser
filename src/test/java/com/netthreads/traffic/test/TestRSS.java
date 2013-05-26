@@ -22,7 +22,7 @@ import com.netthreads.rss.StreamParserImpl;
 /**
  * Simple test to pull RSS traffic data items from UK Highways Agency RSS feed.
  * 
- * This test illustrates the pipeline approach to pulling standard and then extended fields from the RSS items.
+ * This test illustrates the pipeline approach to pulling standard RSS items.
  * 
  * 
  */
