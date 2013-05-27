@@ -47,7 +47,7 @@ public class StreamParserImpl<T> implements StreamParser<T>
 	public StreamParserImpl() throws XmlPullParserException
 	{
 		parsers = new LinkedList<PullParser<T>>();
-		
+
 		factory = XmlPullParserFactory.newInstance();
 
 		factory.setNamespaceAware(false);
@@ -73,7 +73,7 @@ public class StreamParserImpl<T> implements StreamParser<T>
 		{
 			// Assign stream of input.
 			parser.setInput(stream, null);
-			
+
 			int type; // received event type
 
 			// Create holding record
@@ -122,14 +122,15 @@ public class StreamParserImpl<T> implements StreamParser<T>
 		catch (XmlPullParserException e)
 		{
 			// Oops
+			state = ERROR;
 		}
 		catch (IOException e)
 		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// Oops
+			state = ERROR;
 		}
 
-		if (state != CANCELLED)
+		if (state != CANCELLED && state != ERROR)
 		{
 			state = DONE;
 		}
@@ -248,11 +249,11 @@ public class StreamParserImpl<T> implements StreamParser<T>
 	 * Add parser to our parser pipeline.
 	 * 
 	 */
-	@Override
 	@SuppressWarnings(
 	{
 			"rawtypes", "unchecked"
 	})
+	@Override
 	public void addParser(PullParser pullParser)
 	{
 		parsers.add(pullParser);
@@ -262,10 +263,20 @@ public class StreamParserImpl<T> implements StreamParser<T>
 	 * Have to implement this unfortunately.
 	 * 
 	 */
+	@Override
 	public XmlPullParser getParser()
 	{
 		return parser;
 	}
-	
+
+	/**
+	 * Return parser state code.
+	 * 
+	 */
+	@Override
+	public int getState()
+	{
+		return state;
+	}
 
 }

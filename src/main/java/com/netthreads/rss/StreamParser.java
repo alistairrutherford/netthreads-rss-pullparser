@@ -33,6 +33,7 @@ public interface StreamParser<T>
 	public static final int BUSY = 1;
 	public static final int DONE = 2;
 	public static final int CANCELLED = 3;
+	public static final int ERROR = 4;
 	
 	/**
 	 * Parse data into a list of objects of type T.
@@ -62,6 +63,13 @@ public interface StreamParser<T>
 	 * Cancel fetch
 	 */
 	public void cancel();
+	
+	/**
+	 * Return parser state.
+	 * 
+	 * @return The state code.
+	 */
+	public int getState();
 	
 	/**
 	 * Alas, we need access to this for some stuff.
