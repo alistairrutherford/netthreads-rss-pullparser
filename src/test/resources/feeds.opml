@@ -7,6 +7,7 @@
    </head>
    <body>
         <outline title="All Of England" text="All of England" xmlUrl="http://hatrafficinfo.dft.gov.uk/feeds/rss/CurrentAndFutureEvents.xml" />
+        <!--
 		<outline title="North East England" text="North East England" xmlUrl="http://hatrafficinfo.dft.gov.uk/feeds/rss/CurrentAndFutureEvents/North%20East.xml" />
 		<outline title="North West England" text="North West England" xmlUrl="http://hatrafficinfo.dft.gov.uk/feeds/rss/CurrentAndFutureEvents/North%20West.xml" />
 		<outline title="South East England" text="South East England" xmlUrl="http://hatrafficinfo.dft.gov.uk/feeds/rss/CurrentAndFutureEvents/South%20East.xml" />
@@ -28,5 +29,6 @@
 		<outline title="M42" text="Incidents and events affecting the M42 RSS Feed" xmlUrl="http://hatrafficinfo.dft.gov.uk/feeds/rss/CurrentAndFutureEvents/M42.xml" />
 		<outline title="M621" text="Incidents and events affecting the M621 RSS Feed" xmlUrl="http://hatrafficinfo.dft.gov.uk/feeds/rss/CurrentAndFutureEvents/M621.xml" />
 		<outline title="M60" text="Incidents and events affecting the M60 RSS Feed" xmlUrl="http://hatrafficinfo.dft.gov.uk/feeds/rss/CurrentAndFutureEvents/M60.xml" />
+		-->
    </body>
 </opml>
