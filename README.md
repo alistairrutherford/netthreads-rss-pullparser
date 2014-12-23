@@ -5,10 +5,6 @@ Pull parser for RSS and OPML xml format. Suitable for Android
 
 Pull parsers are fast and can be cancelled mid-parse.
 
-Note
------
-Uses Java 7 for maven eclipse plugin.
-
 License
 --------
 [Copyright - Alistair Rutherford 2013 - www.netthreads.co.uk]
