@@ -7,13 +7,12 @@
 	<groupId>com.netthreads.traffic</groupId>
 	<artifactId>netthreads-rss-pullparser</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<packaging>apklib</packaging>
+	<packaging>jar</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<platform.version>4.1.1.4</platform.version>
 		<platform.sdk>17</platform.sdk>
-		<android.plugin.version>3.6.0</android.plugin.version>
 		<java.version>1.6</java.version>
 	</properties>
 
@@ -35,18 +34,6 @@
 					<source>${java.version}</source>
 					<target>${java.version}</target>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>com.jayway.maven.plugins.android.generation2</groupId>
-				<artifactId>android-maven-plugin</artifactId>
-				<version>3.6.0</version>
-				<configuration>
-					<sdk>
-						<path>${env.ANDROID_HOME}</path>
-						<platform>${platform.sdk}</platform>
-					</sdk>
-				</configuration>
-				<extensions>true</extensions>
 			</plugin>
 		</plugins>
 
